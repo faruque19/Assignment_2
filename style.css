@@ -1,11 +1,11 @@
 /* Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Poppins:wght@300&display=swap');
 
 /* Common CSS */
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Luxurious Roman, cursive';
 }
 
 body {
@@ -144,6 +144,11 @@ nav {
 .hero-image-section img {
     width: 440px;
     height: 414px;
+    transition: .5s;
+}
+
+.hero-image-section img:hover {
+    transform: scale(1.10);
 }
 
 /* Company Section */
@@ -290,52 +295,159 @@ footer p {
     transition: .5s;
 }
 
-.fa-facebook:hover {
-    color: #2374E1;
-}
-
 .fa-instagram:hover {
     color: #D6003B;
 }
 
-.fa-linkedin-in:hover {
-    color: #0961B8;
+.fa-facebook:hover {
+    color: #2374E1;
 }
 
 .fa-twitter:hover {
     color: #1C93E4;
 }
 
-/* Resposivness */
-@media only screen and (max-width:688px) {
+.fa-youtube:hover {
+    color: #c70c0c;
+}
 
+
+
+/* Responsive for 1200px */
+@media only screen and (max-width: 1200px) {
     .container {
-        flex-direction: column-reverse;
-        justify-content: center;
+        max-width: 100%;
+        margin: 0 15px;
+    }
+}
+
+/* Responsive for 1024px */
+@media only screen and (max-width: 1024px) {
+
+
+    .hero-section {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .hero-text-section {
+        align-items: center;
+    }
+
+    .hero-image-section {
         text-align: center;
-        width: 100%;
-        margin: 0 0;
-    }
-
-    .heading {
-        margin: 0 0;
-    }
-
-    .logo-and-menu-container {
-        flex-wrap: wrap;
+        margin-top: 50px;
     }
 
     .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+}
+
+/* Responsive for 768px */
+@media only screen and (max-width: 768px) {
+    section {
+        padding: 25px 0;
+    }
+
+    .logo-and-menu-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-text-section h1 {
+        font-size: 37px;
+        line-height: 52px;
+        text-align: center;
+    }
+
+    .hero-image-section img {
+        height: 365px;
+        width: 365px;
+
+    }
+
+    .products {
+        margin: 0 10px;
+
+    }
+
+    .see-all-product-section {
+        margin-right: 10px;
+    }
+
+    .company-section {
+        display: none;
+    }
+
+    .site-brand-name-area h3 {
+        font-size: 27px;
+        color: #E02C6D;
+    }
+
+    .featured-des h2 {
+        text-align: center;
+    }
+
+    .featured-image {
+        text-align: center;
+    }
+
+    .featured-product-container {
         grid-template-columns: 1fr;
+    }
+
+    .featured-button {
+        text-align: center;
+    }
+
+}
+
+/* Responsive for 600px */
+@media only screen and (max-width: 600px) {
+
+    .menu-area {
+        display: none;
+    }
+
+    .hero-text-section p {
+        text-align: center;
 
     }
 
-    .companies img {
-        width: 50%;
+    .products {
+        grid-template-columns: repeat(1, 1fr);
     }
 
-    footer {
-        width: 100%;
+
+}
+
+/* Responsive for 480px */
+@media only screen and (max-width: 480px) {
+    .hero-btn {
+        font-weight: 500;
+    }
+
+    .hero-text-section h1,
+    .featured-des h2 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .hero-image-section img {
+        height: 240px;
+        width: 240px;
+
+    }
+
+    .featured-image img {
+        width: 286px;
+        height: 208px;
+    }
+
+    .featured-des {
+        align-items: center;
     }
 
 }
